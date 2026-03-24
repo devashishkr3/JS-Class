@@ -11,7 +11,13 @@ let classStudent = [
     ["Sachin", 22, "Science"]
 ];
 
-console.log(classStudent[1][0], classStudent[1][1]);
+let x = parseInt(prompt("enter outer index"));
+let y = parseInt(prompt("enter inner index"));
+
+let a = parseInt(prompt("enter outer index"));
+let b = parseInt(prompt("enter inner index"));
+
+console.log(classStudent[x][y], classStudent[a][b]);
 
 
 
