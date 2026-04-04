@@ -55,3 +55,17 @@ console.log("Loops in JS");
 
 
 
+// for(let i=1; i<=3; i++){
+//     for(let j=1; j<=3; j++){
+//         console.log(i);
+        
+//     }
+// }
+
+let n = 5;
+let row = "";
+
+for(let i=1; i<=n; i++){
+    row += i + " ";
+}
+console.log(row);
