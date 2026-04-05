@@ -55,3 +55,4 @@ let calculator2 = {
 };
 
 console.log(`Object calculator2: ${calculator2.mul(5, 4)}`); // Output: 20
+
