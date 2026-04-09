@@ -1,0 +1,64 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NAVBAR BASE */
+.navbar {
+  display: flex; /* horizontal layout */
+  justify-content: space-between; /* logo left, menu right */
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #111;
+  color: white;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.nav-links a:hover {
+  color: #00ffcc;
+}
+
+/* MENU BUTTON (mobile only) */
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 🔥 MOBILE DESIGN */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #222;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+
+    display: none; /* hidden by default */
+  }
+
+  .nav-links.show {
+    display: flex; /* JS will add this */
+  }
+
+  .menu-btn {
+    display: block; /* show hamburger */
+  }
+}
