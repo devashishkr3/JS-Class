@@ -1,0 +1,18 @@
+*{
+    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #ccc;
+    box-shadow: black 2px 2px 5px;
+}
+
+body{
+    background-color: #e0f7fa;
+}
+
+h1{
+    color:red;
+    text-decoration: underline;
+    background-color: yellow;
+}
