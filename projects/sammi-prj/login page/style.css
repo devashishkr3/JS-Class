@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.signin-content {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.login-form {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 60px;
+}
+
+.form-content {
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #0f172a; 
+    letter-spacing: -0.02em;
+}
+
+p {
+    color: #64748b;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+.input-detail {
+    margin-bottom: 24px;
+}
+
+.input-detail label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #334155;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.input-detail input {
+    width: 100%;
+    padding: 16px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    background-color: #f1f5f9;
+    transition: all 0.2s ease-in-out;
+}
+.input-detail input:focus {
+    background-color: #fff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #2563eb; 
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.login-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+.side-image {
+    flex: 1.2;
+    background-image:url('https://png.pngtree.com/thumb_back/fh260/background/20260124/pngtree-serene-workspace-at-home-featuring-desk-computer-mountain-wallpaper-indoor-plants-image_21093930.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-left: 1px solid #e2e8f0;
+}
+.signup-link {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+.signup-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+.signup-link a:hover {
+    text-decoration: underline;
+    color:blue;
+}
