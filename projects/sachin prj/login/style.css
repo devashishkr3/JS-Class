@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: border-box;
+}
+.main {
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+.lgo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: firebrick;
+  padding-right: 30px;
+  margin: 5px;
+  font-weight: 900;
+}
+.menu a {
+  text-decoration: none;
+  color: white;
+  padding: 0px 10px 0px 0px;
+  font-size: 13px;
+}
+.login {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+#lbtn {
+  height: 17px;
+  width: 50px;
+  border-radius: 5px;
+  justify-content: centre;
+  font-size: 12px;
+  background-color: forestgreen;
+  color: blue;
+}
+.main-box{
+  padding-top: 40px;
+  width: 100%;
+  height: 240px;
+  background-color: goldenrod;
+}
+.sign form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
+ .sign h2 {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 20px
+}
+label {
+  padding: 5px;
+  color: ghostwhite;
+}
+
+#sbtn {
+  height: 30px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: blue;
+  font-size: 17px;
+  color: yellow;
+}
+.login {
+  display: flex;
+  flex-direction: row;
+}
+p a {
+  text-align: centre;
+  text-decoration: underline;
+  font-size: 15px;
+  padding: 10px;
+  color: blue;
+}
+.sections{
+  display: flex;
+  flex-direction: column;
+}
+.main2{
+  width: 100%;
+  height: 240px;
+  background-color: green;
+}
+.login2 form{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
+.login2 h2{
+  text-align: center;
+  color: yellow;
+}
+.forget{
+  display: flex;
+  flex-direction: row;
+}
+#lgbtn{
+  height: 30px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: blue;
+  font-size: 17px;
+  color: yellow;
+}
+.regn{
+  display: flex;
+  flex-direction: row;
+}
+@media(width:800px){
+  .main{
+  display: flex;
+    flex-wrap: wrap;
+}
+}
+@media(max-width:1500px){
+  .main{
+  display: flex;
+    flex-wrap: wrap;
+  }
+}
