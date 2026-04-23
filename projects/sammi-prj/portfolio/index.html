@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sammi Suman | Portfolio</title>
+    <!-- <link rel="stylesheet" href="/index.css"> -->
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #3e86f1;
+}
+
+.logo span { color: #0066ff; }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li { margin-left: 30px; }
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: #000; }
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.profile-img {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;     
+    object-fit: cover;   
+    object-position: top; 
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.hero-image-box {
+    flex: 0.8; 
+    display: flex;
+    justify-content: center;
+}
+
+.hero-text {
+    flex: 1.5;
+}
+
+.intro-tag {
+    color: #0066ff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.name-highlight { color: #0066ff; }
+
+.tagline {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.bio {
+    color: #3a3a3a;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.btn-group { display: flex; gap: 15px; }
+
+.btn {
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn-primary { background: #1a1a1a; color: #fff; }
+.btn-secondary { background: #fff; color: #1a1a1a; border: 1px solid #ddd; }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+     </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">SAMMI</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-image-box">
+                <img src= "https://res.cloudinary.com/djishygno/image/upload/v1776930409/Sammi_hrgygb.jpg" alt="Sammi Suman" class="profile-img">
+            </div>
+            <div class="hero-text">
+                <h3 class="intro-tag">Available for work</h3>
+                <h1>Hi, I'm <span class="name-highlight">Sammi Suman</span></h1>
+                <p class="tagline">Dedicated Web Development Student & Technology Enthusiast</p>
+                <p class="bio">As a web developer, I bridge the gap between complex logic and elegant presentation. I enjoy the challenge of translating intricate requirements into clean, performant code. Whether it’s optimizing a database interaction or building a component library, I strive for efficiency, scalability, and a seamless end-user experience.Eager to contribute and grow in a professional environment.</p>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">Let's talk</a>
+                    <a href="#" class="btn btn-secondary">Hire me↗️</a>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
