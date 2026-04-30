@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .bg-night{
+            background-color: black;
+            color: white;
+        }
+
+        .bg-day{
+            background-color: pink;
+            color:brown;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="hello" class="heading bg-day" >Hello, World!
+    </div>
+
+
+
+
+
+    <script>
+        let div = document.querySelector('div');
+        // console.log(div.innerText);
+        // console.log(div.textContent);
+
+        // console.log(div.getAttribute('id'));
+        // div.setAttribute('class', 'heading');
+        // div.setAttribute('name', 'heading11111...');
+
+        // console.log(div);
+        // console.log(div.getAttribute('class'));
+
+        // div.style.color = 'green';
+        div.style.height = '100px';
+        div.style.width = '200px';
+        // div.style.backgroundColor = 'lightgrey';
+        div.style.margin = '50px';
+        div.style.border = '2px solid black';
+        div.style.boxShadow = '5px 5px 5px rgba(0,0,0,0.5)';
+        div.style.padding = '40px';
+
+        // console.log(div.classList.remove('bg-day'));
+        // console.log(div.classList);
+        // console.log(div.classList.add('bg-night'));
+        // console.log(div.classList.add('hello'));
+
+        div.classList.toggle('bg-day');
+        div.classList.toggle('bg-night');
+
+        console.log(div.classList.contains('hello'));
+        
+
+        
+        
+
+        
+        
+
+
+
+
+    </script>
+</body>
+</html>

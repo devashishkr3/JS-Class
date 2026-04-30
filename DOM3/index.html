@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .getAttr {
+            color: blue;
+            font-size: 1.5rem;
+        }
+
+        .node2 {
+            color: red;
+            font-size: 2rem;
+        }
+    </style>
+    <title>DOM</title>
+</head>
+
+<body>
+    <div class="node1">Hello, DOM!</div>
+    <p class="node2">This is a sample paragraph.</p>
+
+
+
+    <script>
+        const div = document.querySelector('div');
+        console.log(div.textContent);
+        div.textContent = 'Hello, JavaScript!';
+
+        div.getAttribute('node1'); // 'Hello, DOM!'
+        div.setAttribute('name', 'myDiv');
+        console.log(div.getAttribute('class')); // 'test value'
+
+        //changing the style of the element using javascript
+        div.style.color = 'green';
+        div.style.height = '100px';
+        div.style.width = '200px';
+        div.style.backgroundColor = 'lightgray';
+        div.style.border = '2px solid black';
+        div.style.padding = '10px';
+        div.style.margin = '20px';
+        div.style.boxShadow = '5px 5px 10px rgba(0, 0, 0, 0.5)';
+
+
+
+
+
+    </script>
+</body>
+
+</html>
