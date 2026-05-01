@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 50px;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <button>Button 1</button>
+    <div class="box">
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+        <button>Click Me!</button>
+    </div>
+
+    <span>Span Element</span>
+
+    <script>
+        let bold = document.createElement('b');  //creating element
+        bold.innerText = 'Hello People I am JS.';  //adding content/text in that tag we created.
+
+        let span = document.querySelector('span');
+        span.appendChild(bold); //adding child in parent element
+        console.log(span);
+
+        let para = document.querySelector('p');
+        para.append(" Hello I am Devashish"); // add text after content
+        para.prepend("Simple ");  // add text before content
+
+        // obj.insertAdjacentElement(where, Element). // syntax
+        // where/position :- beforebegin, afterbegin, beforeend, afterend 
+
+        let paragraph = document.createElement('p');
+        paragraph.innerText = "First paragraph using insertAdjacent property";
+
+        span.insertAdjacentElement('beforebegin', paragraph);
+
+
+        // obj.removeChild(element);
+        // obj.remove();
+
+
+        let h1 = document.querySelector('h1');
+        let body = document.querySelector('body');
+        h1.remove();
+
+
+
+
+        
+        
+        
+    </script>
+    
+</body>
+</html>

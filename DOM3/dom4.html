@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <button>Button 1</button>
+    <div class="box">
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+        <button>Click Me!</button>
+    </div>
+    <span>Span Element</span>
+
+
+
+    <script>
+        let heading = document.querySelector('h1');
+        console.log(heading.parentElement);
+        let div = document.querySelector('.box');
+        console.log(div.childElementCount);
+        console.log(div.children);
+        console.log(div.children[0]);
+        console.log(div.previousElementSibling);
+        console.log(div.children[1].nextElementSibling);
+        
+    </script>
+    
+</body>
+</html>
