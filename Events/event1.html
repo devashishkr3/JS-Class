@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JS</title>
+</head>
+<body>
+    
+    <H1>Events in JS</H1>
+    <button id="btn">Click Me!</button>
+
+    <script>
+        let btn = document.querySelector('button');
+        btn.addEventListener('click', () =>{
+            btn.style.backgroundColor = 'purple';
+            btn.style.height = '70px';
+            btn.style.width = '70px';
+            btn.style.border = '2px dashed grey';
+            btn.style.borderRadius = '20%';
+            btn.style.boxShadow = '3px 3px 3px rgba(0,0,0,0.5)';
+        })
+
+        let h1 = document.querySelector('H1');
+        h1.onmouseenter = function(){
+            h1.style.backgroundColor = 'red';
+        }
+
+        // h1.addEventListener('mouseover', () =>{
+        //     alert("Hello");
+        // })
+
+        h1.addEventListener('mouseleave',() =>{
+            h1.style.backgroundColor = 'blue';
+        })
+
+    </script>
+</body>
+</html>
