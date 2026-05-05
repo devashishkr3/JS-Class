@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .form-data {
+            height: auto;
+            width: auto;
+            padding: 20px 50px;
+            border-radius: 10px;
+            border: 2px solid red;
+            box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.8);
+            background-color: rgb(201, 245, 230);
+            font-size: 1.2rem;
+        }
+    </style>
+    <title>Change Event in JS</title>
+</head>
+
+<body>
+    <div class="form-data">
+        <h3>
+            Change Event:-
+        </h3>
+        <p>
+            The change Event occurs when the value of an element has been changed (only works on input tag, textarea tag
+            and select tag elements.)
+        </p>
+        <p>Jab bhi inn tino element me koi bhi changes aaiga to change event use track karta hai.</p>
+        <p>Ye cahnges track karne ke liye change event initial statement and final statement dono ko compare karta hai.
+        </p>
+        <br>
+        <p><span>Example:-</span> kabhi kabhi hum kucch websites prr dekhte hai ki search button nhi raheta hai sirf hum
+            jo enter karte jaate hai automatic search hota jaata hai jaise hi kuch phir se changes kiye phir se wo track
+            hota hai and then phir se search ho jaata hai.</p>
+    </div>
+
+    <p>----------------------------Example---------------------------</p>
+
+    <form action="./action">
+        <input type="text" placeholder="username" id="user">
+        <input type="password" placeholder="password" id="pass">
+        <button>Login</button>
+    </form>
+
+    <script>
+        let form = document.querySelector('form');
+        form.addEventListener("submit", (event) =>{
+            event.preventDefault();
+        })
+
+        let user = document.querySelector("#user");
+
+        user.addEventListener("change", ()=>{
+            console.log("Input changed");
+            console.log("Final Value = ", user.value);
+        })
+    </script>
+</body>
+
+</html>
