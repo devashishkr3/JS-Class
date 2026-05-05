@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .form-data {
+            height: auto;
+            width: auto;
+            padding: 20px 50px;
+            border-radius: 10px;
+            border: 2px solid red;
+            box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.8);
+            background-color: rgb(201, 245, 230);
+            font-size: 1.2rem;
+        }
+    </style>
+    <title>Handling Form Data in JS</title>
+</head>
+
+<body>
+
+    <div class="form-data">
+        <h3>Extracting Form Data & handling form Data in JS:-</h3>
+        <p>Jab bhi hum form submit karte hai to data ko extract kar sakte hai and form ke data ko access kar skte hai.
+        </p>
+        <p>submitted form me jo bhi inputed data hai wo hume input.value me milega</p>
+        <p>Hum Jo bhi input karte hai wo value property me jaake store hota hai.</p>
+    </div>
+
+    <p>----------------------------Example---------------------------</p>
+    <form action="./action">
+        <input type="text" placeholder="search">
+        <button>Submit</button>
+    </form>
+
+
+
+    <script>
+        // data ko extract karke console me print karwana 
+        let form = document.querySelector("form");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            let inp = document.querySelector("input");
+            console.log(inp.value);
+        })
+    </script>
+
+</body>
+
+</html>
