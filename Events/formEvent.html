@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+</head>
+<body>
+    <form action="./action">
+        <input placeholder="username">
+        <button>Register</button>
+    </form>
+    
+    <script>
+        let form = document.querySelector("form");
+
+        form.addEventListener("submit", (event) =>{
+            /* prevent default - jab bhi hum form ko submit karte hai to 
+            form submit hone ke baad hume new page prr redirect kar deta hai
+            browser to use se bachne ke liye hum prevent default function
+            ka use karte hai and ye predefined function hota hai hamare JS me. */
+            event.preventDefault();
+            alert("From Submitted");
+        })
+
+
+    </script>
+</body>
+</html>
