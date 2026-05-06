@@ -9,46 +9,62 @@
     <h1>
         Hello Guys!!
     </h1>
-    <input type="text" placeholder="search">
+    <input placeholder="search">
     <button>Search</button>
 
     <script>
-        let h1 = document.querySelector('h1');
-        h1.addEventListener("click", function(event){
-            console.log(event);
-            console.log(event.type);
-            console.log("button clicked");
+        // let h1 = document.querySelector('h1');
+        // h1.addEventListener("click", function(event){
+        //     console.log(event);
+        //     console.log(event.type);
+        //     console.log("button clicked");
             
+        // })
+
+        // let input = document.querySelector('input');
+        // input.addEventListener('keydown', (event) =>{
+        //     console.log(event);
+        //     console.log("Key downed");
+            
+            
+        // })
+
+        // input.addEventListener('keypress', (event) =>{
+        //     console.log(event);
+        //     console.log("Key pressed");
+            
+            
+        // })
+
+        // input.addEventListener('keyup', (event) =>{
+        //     console.log(event);
+        //     console.log("Key released");
+            
+            
+        // })
+
+        let inp = document.querySelector('input');
+
+        inp.addEventListener("keypress", (event) =>{
+            console.log(event.code);
+            
+            if(event.code == 'keyW'){
+                console.log("Upward");
+            } else if(event.code == 'keyS'){
+                console.log("Downward");
+            } else if(event.code == 'keyA'){
+                console.log("Move Left");
+            } else if(event.code == 'keyD'){
+                console.log("Move Right");
+            } else {
+                console.log("Another key pressed");
+            }
         })
 
-        let input = document.querySelector('input');
-        input.addEventListener('keydown', (event) =>{
-            console.log(event);
-            console.log("Key downed");
-            
-            
-        })
-
-        input.addEventListener('keypress', (event) =>{
-            console.log(event);
-            console.log("Key pressed");
-            
-            
-        })
-
-        input.addEventListener('keyup', (event) =>{
-            console.log(event);
-            console.log("Key released");
-            
-            
-        })
-
-        input.addEventListener('keypress', (event)=>{
-            console.log(`key = ${event.key} pressed`);
-            console.log(`code = ${event.code}`);
-            
-            
-        })
+        // input.addEventListener('keypress', (event)=>{
+        //     console.log(`key = ${event.key} pressed`);
+        //     console.log(`code = ${event.code}`);
+        // })
 
         
     </script>

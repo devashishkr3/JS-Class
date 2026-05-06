@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Event Listener
+    </h1>
+    <p>Paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem provident deleniti aspernatur obcaecati exercitationem? Aperiam cumque quia odio iure pariatur in. Eos odit deleniti ipsam voluptatem nulla ea maiores ab.</p>
+    <span>Simple Span tag.</span>
+    <button>Click Me!</button>
+
+    <script>
+        let btn = document.querySelector('button');
+        let h1 = document.querySelector('h1');
+        let p = document.querySelector('p');
+        let span = document.querySelector('span');
+
+        btn.addEventListener("click", changeColor);
+        h1.addEventListener("click", changeColor);
+        p.addEventListener("click", changeColor);
+        span.addEventListener("click", changeColor);
+
+        function changeColor(){
+            console.log(this.innerText);
+            this.style.backgroundColor = 'blue';
+        }
+    </script>
+</body>
+</html>
