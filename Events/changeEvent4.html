@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+</head>
+<body>
+    <select id="course">
+        <option value="bihar">bihar</option>
+        <option value="bengol">bangol</option>
+        <option value="up">up</option>
+        <option value="mp">mp</option>
+    </select>
+
+    <select>
+        <option value="patna">patna</option>
+        <option value="katihar">katihar</option>
+        <option value="munger">munger</option>
+    </select>
+
+    <script>
+
+        let callingFunction = function (){
+            console.log("Selected Course : ", course.value);
+        }
+
+        let course = document.querySelector('#course');
+        course.addEventListener("change", callingFunction);
+
+
+    </script>
+</body>
+</html>
