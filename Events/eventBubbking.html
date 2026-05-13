@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        div {
+            height: 500px;
+            width: 500px;
+            background-color: red;
+            border-radius: 10%;
+            border: 3px solid black;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul {
+            height: 400px;
+            width: 400px;
+            background-color: white;
+            border-radius: 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        li {
+            height: 100px;
+            width: 300px;
+            background-color: greenyellow;
+            border: 2px solid black;
+            border-radius: 10%;
+            font-size: 2rem;
+            padding: 30px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ul>
+    </div>
+
+
+    <script>
+        let div = document.querySelector("div");
+        let ul = document.querySelector("ul");
+        let li = document.querySelector("li");
+
+
+
+        div.addEventListener("click", (event) => {
+            console.log("Div was clicked");
+        });
+
+        ul.addEventListener("click", (event) => {
+            event.stopPropagation();
+            console.log("ul was clicked");
+        });
+
+        li.addEventListener("click", () => {
+            event.stopPropagation();
+            console.log("li was clicked");
+        });
+
+    </script>
+</body>
+
+</html>
