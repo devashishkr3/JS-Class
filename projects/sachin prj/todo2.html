@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        @keyframes sachin {
+            0% {
+                left: 0;
+                transform: rotate(0deg);
+            }
+
+            50% {
+                left: 200px;
+            }
+
+            50% {
+                top: -20;
+            }
+
+            100% {
+                top: 800px;
+                transform: rotate(360deg);
+            }
+        }
+
+        .box {
+            margin: 10px;
+            padding: 10px;
+            height: auto;
+            width: 500px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: green;
+            position: absolute;
+            top: 5px;
+        }
+
+        li {
+            color: blue;
+            background-color: lightgreen;
+            margin: 3px;
+            border: 2px solid black;
+            Padding-left: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="text" placeholder="type something...">
+        <button id="add">Add</button>
+        <button id="del">Delete</button>
+        <ol></ol>
+    </div>
+
+
+    <script>
+        let box = document.querySelector('.box');
+        box.ondblclick = function () {
+            box.style.animation = 'sachin 5s ease-in-out 1s 1 normal';
+        }
+        let input = document.querySelector('input');
+        let Add = document.querySelector('#add');
+        let Del = document.querySelector('#del');
+        let ol = document.querySelector('ol');
+        Add.addEventListener('click', function () {
+            let li = document.createElement('li');
+            ol.appendChild(li);
+            li.innerText = input.value;
+            input.value = '';
+        })
+        Del.addEventListener('click', function () {
+            let All = document.querySelectorAll('li');
+            for (let name of All) {
+                name.remove();
+            }
+        })
+    </script>
+</body>
+
+</html>
