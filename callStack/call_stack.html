@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Call Stack</h1>
+
+    <script>
+        function firstFunction() {
+            console.log("Inside firstFunction");
+        }
+
+        function secondFunction() {
+            console.log("Inside secondFunction");
+            firstFunction();
+        }
+
+        function thirdFunction() {
+            console.log("Inside thirdFunction");
+            secondFunction();
+        }
+
+        thirdFunction();
+
+        setTimeout(() => {
+            console.log("setTimeout");
+        }, 9000);
+
+        setTimeout(() => {
+            console.log("setTimeout 2");
+        }, 9000);
+    </script>
+</body>
+
+</html>

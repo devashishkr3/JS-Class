@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call stack</title>
+</head>
+<body>
+    <h1>Call Stack</h1>
+
+    <script>
+        function first(){
+            console.log("first");
+        }
+
+        function second(){
+            console.log("second");
+            first();
+        }
+
+        function third(){
+            console.log("third");
+            second();
+        }
+
+        third();
+
+        setTimeout(() =>{
+            console.log("timeout 1")
+        }, 9000);
+
+        setTimeout(() =>{
+            console.log("timeout 2");
+        }, 9000);
+    </script>
+</body>
+</html>
