@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function saveToDB(data, success, failure) {
+            let internetSpeed = Math.floor(Math.random() * 10) + 1; //1-10 
+            console.log(internetSpeed, data);
+            if (internetSpeed > 4) {
+                success();
+            } else {
+                failure();
+            }
+        }
+
+        saveToDB(
+            "Sachin", // passing data 
+            () => { // success function for first student
+                console.log("Success : Student1 Data is saved.");
+
+                // sending second data because 1st data is saved in db
+                saveToDB(
+                    "Sourav", // passing data 
+                    () => { // success function for second student
+                        console.log("Success : Student2 Data is saved.");
+
+                        // sending second data because 1st data is saved in db
+                        saveToDB(
+                            "Bibhuti", // passing data 
+                            () => { // success function for third student
+                                console.log("Success : Student3 Data is saved.");
+                            },
+                            // handling failure for third student
+                            () => { // failure function for third student
+                                console.log("Failure3 : weak Internet");
+                            }
+                        );
+                    },
+                    // handling failure for third student
+                    () => { // failure function for second student
+                        console.log("Failure2 : weak Internet");
+                    }
+                );
+            },
+            // handling failure for third student
+            () => { // failure function for first student
+                console.log("Failure3 : weak Internet");
+            }
+        );
+
+        // saveToDB(
+        //     "Sourav", // passing data 
+        //     () => { // success function for first student
+        //         console.log("Success : Student2 Data is saved.");
+        //     },
+        //     () => { // failure function for first student
+        //         console.log("Failure2 : weak Internet");
+        //     }
+        // );
+
+        // saveToDB(
+        //     "Bibhuti", // passing data 
+        //     () => { // success function for first student
+        //         console.log("Success : Student3 Data is saved.");
+        //     },
+        //     () => { // failure function for first student
+        //         console.log("Failure3 : weak Internet");
+        //     }
+        // );
+
+    </script>
+</body>
+
+</html>
