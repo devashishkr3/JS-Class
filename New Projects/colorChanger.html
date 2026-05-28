@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Background Color Changer</title>
+
+  <style>
+
+    body{
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      /* transition: 0.3s; */
+    }
+
+    h1{
+      margin-bottom: 20px;
+    }
+
+    button{
+      padding: 12px 20px;
+      font-size: 18px;
+      border: none;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover{
+      opacity: 0.8;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Background Color Changer 🎨</h1>
+
+  <button onclick="changeColor()">
+    Change Color
+  </button>
+
+
+
+
+  <script>
+
+    function changeColor(){
+
+      // Random color generate
+      const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+
+      // Background color change
+      document.body.style.backgroundColor = randomColor;
+
+    }
+
+  </script>
+
+</body>
+</html>

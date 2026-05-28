@@ -11,24 +11,43 @@
     <script>
         let h1 = document.querySelector("h1");
 
-        function changeColor(color, delay, nextChangeColor){
+        function changeColor2(color, delay, nextColorChange){
             setTimeout(() =>{
                 h1.style.color = color;
-                if(nextChangeColor){ 
-                    nextChangeColor();
+                if(nextColorChange){
+                    nextColorChange();
                 }
             }, delay);
         }
 
+        changeColor2("blue", 1000, () =>{
+            changeColor2("yellow", 2000, () =>{
+                changeColor2("red", 3000, () =>{
+                    changeColor2("skyblue", 2000, ()=>{
+                        changeColor2("maroon", 4000);
+                    });
+                });
+            });
+        });
+
+        // function changeColor(color, delay, nextChangeColor){
+        //     setTimeout(() =>{
+        //         h1.style.color = color;
+        //         if(nextChangeColor){ 
+        //             nextChangeColor();
+        //         }
+        //     }, delay);
+        // }
 
 
-        // changeColor("red", 2000);
 
-        changeColor("red", 2000, ()=>{
-            changeColor("orange", 2000, () =>{
-                changeColor("green", 2000);
-            })
-        })
+        // // changeColor("red", 2000);
+
+        // changeColor("red", 2000, ()=>{
+        //     changeColor("orange", 2000, () =>{
+        //         changeColor("green", 2000);
+        //     })
+        // })
 
 
     </script>

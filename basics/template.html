@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Character Certificate</title>
+  <style>
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 0;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 13pt;
+      line-height: 1.55;
+      color: #111;
+    }
+    .bar {
+      height: 5mm;
+      background: #9a9a9a;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .inner {
+      padding: 12mm 16mm 14mm;
+    }
+    .logo-row { text-align: center; margin-bottom: 3mm; position: relative; }
+    .logo-img { width: 22mm; height: 22mm; object-fit: contain; }
+    .logo-fallback {
+      width: 22mm; height: 22mm; border: 1.5px solid #333; border-radius: 50%; margin: 0 auto;
+    }
+    .hi { text-align: center; font-weight: 700; font-size: 12.5pt; margin: 0; }
+    .en { text-align: center; font-weight: 700; font-size: 16.5pt; margin: 2mm 0; }
+    .addr { text-align: center; font-size: 11.5pt; margin: 0; }
+    .affil { text-align: center; font-size: 10.5pt; margin: 1mm 0 0; }
+    .doc-title {
+      text-align: center; font-weight: 700; font-size: 14pt; margin: 6mm 0 5mm;
+      text-decoration: underline; text-transform: uppercase;
+    }
+    .meta-row { display: flex; justify-content: space-between; font-size: 12pt; margin-bottom: 6mm; }
+    .line { margin: 4mm 0; font-size: 12.5pt; }
+    .fill {
+      border-bottom: 1px dotted #000;
+      display: inline-block;
+      min-width: 55%;
+      margin: 0 2px;
+      font-weight: 700;
+      padding: 0 4px 1px;
+    }
+    .sig-row { display: flex; justify-content: space-between; margin-top: 16mm; }
+    .sig-col { width: 40%; text-align: center; font-size: 11pt; }
+    .sig-line { border-top: 1px solid #000; margin: 12mm 4mm 3mm; }
+    .sig-label { font-weight: 700; margin-top: 2mm; }
+    .college-foot { font-size: 10pt; margin-top: 2mm; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="bar"></div>
+    <div class="inner">
+      <div class="logo-row">
+        ${logoImgTag()}
+      </div>
+      <p class="en">Sant Sandhya Das Mahila College</p>
+      <p class="addr">Barh, Patna - 803213, Bihar</p>
+      <p class="affil">(Affiliated to Patliputra University, Patna)</p>
+
+      <div class="doc-title">Character Certificate</div>
+      <br>
+      <br>
+
+      <div class="meta-row">
+        <span>Certificate No.:- ${escapeHtml(data.certificateNo)}</span>
+        <span>Date :- ${escapeHtml(dateStr)}</span>
+      </div>
+
+      <p class="line">
+      This is to certify that Miss. 
+      <span class="fill">${escapeHtml(data.name)}</span>
+      Son/Daughter of Mr. 
+      <span class="fill">${escapeHtml(data.fatherName)}</span>
+      is/was a student of the class 
+      <span class="fill">${escapeHtml(data.courseName)} (HONS) ${escapeHtml(data.departmentName)} PART-3 </span>
+      degree course bearing roll number 
+      <span class="fill">${escapeHtml(rollDisplay)}</span>
+      in the session from 
+      <span class="fill">${escapeHtml(data.session)}</span>.
+      During the period of his/her study in this college his/her character is/was 
+      <span class="fill">${escapeHtml(char)}</span>.</p>
+
+      <br>
+
+      <div class="sig-row">
+        <div class="sig-col">
+          <div class="sig-line"></div>
+          <div class="sig-label">Head Assistant :</div>
+        </div>
+        <div class="sig-col">
+          <div class="sig-line"></div>
+          <div class="sig-label">Principal/Authorized Signatory :</div>
+          <p class="college-foot">S.S.D.M COLLEGE BARH (PATNA)</p>
+        </div>
+      </div>
+    </div>
+    <div class="bar"></div>
+  </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Character Certificate</title>
+  <style>
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 0;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 13pt;
+      line-height: 1.55;
+      color: #111;
+    }
+    .bar {
+      height: 5mm;
+      background: #9a9a9a;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .inner {
+      padding: 12mm 16mm 14mm;
+    }
+    .logo-row { text-align: center; margin-bottom: 3mm; position: relative; }
+    .logo-img { width: 22mm; height: 22mm; object-fit: contain; }
+    .logo-fallback {
+      width: 22mm; height: 22mm; border: 1.5px solid #333; border-radius: 50%; margin: 0 auto;
+    }
+    .hi { text-align: center; font-weight: 700; font-size: 12.5pt; margin: 0; }
+    .en { text-align: center; font-weight: 700; font-size: 16.5pt; margin: 2mm 0; }
+    .addr { text-align: center; font-size: 11.5pt; margin: 0; }
+    .affil { text-align: center; font-size: 10.5pt; margin: 1mm 0 0; }
+    .doc-title {
+      text-align: center; font-weight: 700; font-size: 14pt; margin: 6mm 0 5mm;
+      text-decoration: underline; text-transform: uppercase;
+    }
+    .meta-row { display: flex; justify-content: space-between; font-size: 12pt; margin-bottom: 6mm; }
+    .line { margin: 4mm 0; font-size: 12.5pt; }
+    .fill {
+      border-bottom: 1px dotted #000;
+      display: inline-block;
+      min-width: 55%;
+      margin: 0 2px;
+      font-weight: 700;
+      padding: 0 4px 1px;
+    }
+    .sig-row { display: flex; justify-content: space-between; margin-top: 16mm; }
+    .sig-col { width: 40%; text-align: center; font-size: 11pt; }
+    .sig-line { border-top: 1px solid #000; margin: 12mm 4mm 3mm; }
+    .sig-label { font-weight: 700; margin-top: 2mm; }
+    .college-foot { font-size: 10pt; margin-top: 2mm; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="bar"></div>
+    <div class="inner">
+      <div class="logo-row">
+        ${logoImgTag()}
+      </div>
+      <p class="en">Sant Sandhya Das Mahila College</p>
+      <p class="addr">Barh, Patna - 803213, Bihar</p>
+      <p class="affil">(Affiliated to Patliputra University, Patna)</p>
+
+      <div class="doc-title">Character Certificate</div>
+      <br>
+      <br>
+
+      <div class="meta-row">
+        <span>Certificate No.:- ${escapeHtml(data.certificateNo)}</span>
+        <span>Date :- ${escapeHtml(dateStr)}</span>
+      </div>
+
+      <p class="line">This is to certify that Miss. <span class="fill">${escapeHtml(data.name)}</span></p>
+      <p class="line">Son/Daughter of Mr. <span class="fill">${escapeHtml(data.fatherName)}</span></p>
+      <p class="line">is/was a student of the class <span class="fill">${escapeHtml(data.courseName)} (HONS) ${escapeHtml(data.departmentName)} PART-3 </span> degree course bearing roll</p>
+      <p class="line">number <span class="fill">${escapeHtml(rollDisplay)}</span> in the session from <span class="fill">${escapeHtml(data.session)}</span>.</p>
+      <p class="line">During the period of his/her study in this college his/her character is/was <span class="fill">${escapeHtml(char)}</span>.</p>
+
+      <br>
+
+      <div class="sig-row">
+        <div class="sig-col">
+          <div class="sig-line"></div>
+          <div class="sig-label">Head Assistant :</div>
+        </div>
+        <div class="sig-col">
+          <div class="sig-line"></div>
+          <div class="sig-label">Principal/Authorized Signatory :</div>
+          <p class="college-foot">S.S.D.M COLLEGE BARH (PATNA)</p>
+        </div>
+      </div>
+    </div>
+    <div class="bar"></div>
+  </div>
+</body>
+</html> -->
