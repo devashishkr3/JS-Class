@@ -12,7 +12,7 @@
 
     <script>
         function saveToDB(data, success, failure) {
-            let internetSpeed = Math.floor(Math.random() * 10) + 1; //1-10 
+            let internetSpeed = Math.floor(Math.random() * 10) + 1; //1-10
             console.log(internetSpeed, data);
             if (internetSpeed > 4) {
                 success();
@@ -21,45 +21,53 @@
             }
         }
 
-        saveToDB(
-            "Sachin", // passing data 
-            () => { // success function for first student
-                console.log("Success : Student1 Data is saved.");
-
-                // sending second data because 1st data is saved in db
-                saveToDB(
-                    "Sourav", // passing data 
-                    () => { // success function for second student
-                        console.log("Success : Student2 Data is saved.");
-
-                        // sending second data because 1st data is saved in db
-                        saveToDB(
-                            "Bibhuti", // passing data 
-                            () => { // success function for third student
-                                console.log("Success : Student3 Data is saved.");
+        saveToDB("Tanya",
+            () =>{
+                console.log("Data saved in DB.");
+                saveToDB("Sachin",
+                    () =>{
+                        console.log("Sachin's data saved");
+                        saveToDB("Sourav", 
+                            () =>{
+                                console.log("Sourav's data saved");
                             },
-                            // handling failure for third student
-                            () => { // failure function for third student
-                                console.log("Failure3 : weak Internet");
+                            () =>{
+                                console.log("Failure 3");
                             }
-                        );
+                        )
                     },
-                    // handling failure for third student
-                    () => { // failure function for second student
-                        console.log("Failure2 : weak Internet");
+                    () =>{
+                        console.log("Failure 2");
                     }
-                );
+                )
             },
-            // handling failure for third student
-            () => { // failure function for first student
-                console.log("Failure3 : weak Internet");
+            () =>{
+                console.log("Failure: Weak Internet");
             }
-        );
+        )
 
         // saveToDB(
         //     "Sourav", // passing data 
         //     () => { // success function for first student
         //         console.log("Success : Student2 Data is saved.");
+        //         saveToDB(
+        //             "Bibhuti",
+        //             () =>{
+        //                 console.log("Success : Student3 Data is saved.");
+        //                 saveToDB(
+        //                     "Sachin",
+        //                     () =>{
+        //                         console.log("Data4 was saved");
+        //                     },
+        //                     () =>{
+        //                         console.log("Failure 4 : weak internet");
+        //                     }
+        //                 )
+        //             },
+        //             () => {
+        //                 console.log("Failure3 : weak Internet");
+        //             }
+        //         )
         //     },
         //     () => { // failure function for first student
         //         console.log("Failure2 : weak Internet");
@@ -71,6 +79,41 @@
         //     () => { // success function for first student
         //         console.log("Success : Student3 Data is saved.");
         //     },
+        //     () => { // failure function for first student
+        //         console.log("Failure3 : weak Internet");
+        //     }
+        // );
+
+        //         saveToDB(
+        //     "Sachin", // passing data 
+        //     () => { // success function for first student
+        //         console.log("Success : Student1 Data is saved.");
+
+        //         // sending second data because 1st data is saved in db
+        //         saveToDB(
+        //             "Sourav", // passing data 
+        //             () => { // success function for second student
+        //                 console.log("Success : Student2 Data is saved.");
+
+        //                 // sending second data because 1st data is saved in db
+        //                 saveToDB(
+        //                     "Bibhuti", // passing data 
+        //                     () => { // success function for third student
+        //                         console.log("Success : Student3 Data is saved.");
+        //                     },
+        //                     // handling failure for third student
+        //                     () => { // failure function for third student
+        //                         console.log("Failure3 : weak Internet");
+        //                     }
+        //                 );
+        //             },
+        //             // handling failure for third student
+        //             () => { // failure function for second student
+        //                 console.log("Failure2 : weak Internet");
+        //             }
+        //         );
+        //     },
+        //     // handling failure for third student
         //     () => { // failure function for first student
         //         console.log("Failure3 : weak Internet");
         //     }
