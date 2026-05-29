@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Facts Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .fact-card {
+            background: #f5f7ff;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        #fact {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        #length {
+            display: block;
+            margin-top: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            padding: 14px 28px;
+            background: #667eea;
+            color: white;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #4f67db;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🐱 Random Cat Facts</h1>
+
+        <div class="fact-card">
+            <p id="fact">
+                Click the button below to get a random cat fact!
+            </p>
+
+            <span id="length"></span>
+        </div>
+
+        <button id="btn">
+            Get New Fact
+        </button>
+    </div>
+
+    <script>
+        const factElement = document.getElementById("fact");
+        const lengthElement = document.getElementById("length");
+        const button = document.getElementById("btn");
+
+        const API_URL = "https://catfact.ninja/fact";
+
+        async function getCatFact() {
+            try {
+                factElement.textContent = "Loading cat fact...";
+                lengthElement.textContent = "";
+
+                const response = await fetch(API_URL);
+
+                if (!response.ok) {
+                    throw new Error("Failed to fetch data");
+                }
+
+                const data = await response.json();
+
+                factElement.textContent = data.fact;
+                lengthElement.textContent = `Fact Length: ${data.length} characters`;
+
+            } catch (error) {
+                factElement.textContent = "Something went wrong!";
+                console.error(error);
+            }
+        }
+
+        button.addEventListener("click", getCatFact);
+
+        // First fact automatically load
+        getCatFact();
+    </script>
+</body>
+
+</html>
