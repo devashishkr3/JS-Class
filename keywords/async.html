@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Function</title>
+</head>
+<body>
+    <script>
+
+        function print(){
+            console.log("printing"); //1sec
+        }
+
+        async function greet(){
+            return "Hello!!"; //1sec
+        }
+
+        const hero = async () =>{
+            return "Hero";
+        }
+
+        greet()
+        .then((result) =>{
+            console.log(result); //2sec
+            console.log("promise was resoved");
+        })
+        .catch((err) =>{
+            console.log(err);
+        })
+        
+        hero()
+        .then((r) =>{
+            console.log(r)
+        })
+        .catch((e)=>{
+            console.log(e);
+        })
+
+        print();
+    </script>
+</body>
+</html>

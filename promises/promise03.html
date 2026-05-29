@@ -21,40 +21,77 @@
         }
 
         saveToDB("sachin")
-        .then(() =>{
-            console.log("Data 1 was saved");
-            saveToDB("sourav")
-            .then(() =>{
-                console.log("Data 2 was saved");
-                saveToDB("Bibhuti")
-                .then(() =>{
-                    console.log("Data 3 was saved");
-                    saveToDB("Sammi")
-                    .then(() =>{
-                        console.log("Data 4 was saved");
-                        saveToDB("Tanya")
-                        .then(() =>{
-                            console.log("Data 5 was saved");
-                        })
-                        .catch(() =>{
-                            console.log("Failure 5 Weak Internet");
-                        })
-                    })
-                    .catch(() =>{
-                        console.log("Failure 4 weak Internet");
-                    })
-                })
-                .catch(() =>{
-                    console.log("Failure 3 weak Internet");
-                })
-            })
-            .catch(() =>{
-                console.log("Failure 2 weak Internet");
-            })
+        .then((r) =>{
+            console.log(r);
+            return saveToDB("bibhuti")
         })
-        .catch(()=>{
-            console.log("Failure 1 Weak Internet");
+        .then( (r) =>{
+            console.log(r);
+            return saveToDB("tanya")
         })
+        .catch((e) =>{
+            console.log(e);
+        })
+        
+
+
+        // saveToDB("Sachin")
+        // .then((result) =>{
+        //     console.log(result);
+        //     saveToDB("Sourav")
+        //     .then((result) =>{
+        //         console.log(result);
+        //         saveToDB("sammi")
+        //         .then((result) =>{
+        //             console.log(result);
+        //         })
+        //         .catch((e) =>{
+        //             console.log(e);
+        //         })
+        //     })
+        //     .catch((e) =>{
+        //         console.log(e);
+        //     })
+        // })
+        // .catch((error) =>{
+        //     console.log(error);
+        // })
+
+        // saveToDB("sachin")
+        // .then(() =>{
+        //     console.log("Data 1 was saved");
+        //     saveToDB("sourav")
+        //     .then(() =>{
+        //         console.log("Data 2 was saved");
+        //         saveToDB("Bibhuti")
+        //         .then(() =>{
+        //             console.log("Data 3 was saved");
+        //             saveToDB("Sammi")
+        //             .then(() =>{
+        //                 console.log("Data 4 was saved");
+        //                 saveToDB("Tanya")
+        //                 .then(() =>{
+        //                     console.log("Data 5 was saved");
+        //                 })
+        //                 .catch(() =>{
+        //                     console.log("Failure 5 Weak Internet");
+        //                 })
+        //             })
+        //             .catch(() =>{
+        //                 console.log("Failure 4 weak Internet");
+        //             })
+        //         })
+        //         .catch(() =>{
+        //             console.log("Failure 3 weak Internet");
+        //         })
+        //     })
+        //     .catch(() =>{
+        //         console.log("Failure 2 weak Internet");
+        //     })
+        // })
+        // .catch(()=>{
+        //     console.log("Failure 1 Weak Internet");
+        // })
     </script>
 </body>
 
